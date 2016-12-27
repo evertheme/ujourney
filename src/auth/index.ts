@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/themes';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 

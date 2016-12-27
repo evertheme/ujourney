@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { AuthModule } from '../auth';
 import { FirebaseModule } from '../firebase';
-import { TasksModule } from './.';
+import { TasksModule } from '../features/tasks';
 
 import { AppComponent } from './components/app';
 import { AppHeaderComponent } from './components/app-header';

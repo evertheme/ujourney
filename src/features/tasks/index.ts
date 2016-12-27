@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/themes';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AuthGuard } from '../auth';
+import { AuthGuard } from '../../auth';
 
 import { TaskFormComponent } from './components/task-form';
 import { TaskItemComponent } from './components/task-item';
