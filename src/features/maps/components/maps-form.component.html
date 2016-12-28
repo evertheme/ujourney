@@ -1,0 +1,12 @@
+<form class="map-form" (ngSubmit)="submit()" novalidate>
+  <input
+    [(ngModel)]="title"
+    (keyup.escape)="clear()"
+    autocomplete="off"
+    autofocus
+    class="map-form__input"
+    name="title"
+    placeholder="Create New Journey Map..."
+    required
+    type="text">
+</form>

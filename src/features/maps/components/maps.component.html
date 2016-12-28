@@ -1,0 +1,14 @@
+<div class="g-row">
+  <div class="g-col">
+    <maps-form (createMap)="mapService.createMap($event)"></maps-form>
+  </div>
+
+  <div class="g-col">
+    <maps-list
+      [filter]="filter | async"
+      [maps]="mapService.visibleMaps$"
+      (remove)="mapService.removeMap($event)"
+      (update)="mapService.updateMap($event.map, $event.changes)">
+    </maps-list>
+  </div>
+</div>

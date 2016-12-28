@@ -1,0 +1,14 @@
+<ul class="map-filters">
+  <li><a [class.active]="!filter" [routerLink]="['/maps']">View All</a></li>
+  <li><a [class.active]="filter === 'false'" [routerLink]="['/maps', {completed: false}]">Active</a></li>
+  <li><a [class.active]="filter === 'true'" [routerLink]="['/maps', {completed: true}]">Completed</a></li>
+</ul>
+
+<div class="map-list">
+  <maps-item
+    *ngFor="let map of maps | async"
+    [map]="map"
+    (remove)="remove.emit(map)"
+    (update)="update.emit({map: map, changes: $event})">
+  </maps-item>
+</div>

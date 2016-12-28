@@ -1,32 +1,32 @@
 @import
 "~minx/src/settings",
-"~minx/src/functions",
-"~minx/src/mixins";
+  "~minx/src/functions",
+  "~minx/src/mixins";
 
 //===================================================================
 //  TASK-FILTERS
 //===================================================================
 
-.task-filters {
-  @include clearfix;
+.map-filters {
+@include clearfix;
   margin-bottom: 45px;
   padding-left: 1px;
   font-size: rem(16px);
   line-height: 24px;
   list-style-type: none;
 
-  @include media-query(540) {
+@include media-query(540) {
     margin-bottom: 55px;
   }
 
   li {
     float: left;
 
-    &:not(:first-child) {
+  &:not(:first-child) {
       margin-left: 12px;
     }
 
-    &:not(:first-child):before {
+  &:not(:first-child):before {
       padding-right: 12px;
       content: '/';
       font-weight: 300;
@@ -37,7 +37,7 @@
     color: #999;
     text-decoration: none;
 
-    &.active {
+  &.active {
       color: #fff;
     }
   }
@@ -48,7 +48,7 @@
 //  TASK-LIST
 //===================================================================
 
-.task-list {
+.map-list {
   border-top: 1px dotted #666;
 }
 

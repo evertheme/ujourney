@@ -1,18 +1,18 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { ITask } from '../models/task';
+import { IMap } from '../models/map.model';
 
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'task-item',
+  selector: 'maps-item',
   styles: [
-    require('./task-item.scss')
+    require('./maps-item.component.scss')
   ],
-  template: require('./task-item.html')
+  template: require('./maps-item.component.html')
 })
 
-export class TaskItemComponent {
-  @Input() task: ITask;
+export class MapItemComponent {
+  @Input() map: IMap;
   @Output() remove = new EventEmitter(false);
   @Output() update = new EventEmitter(false);
 
@@ -21,13 +21,13 @@ export class TaskItemComponent {
 
   editTitle(): void {
     this.editing = true;
-    this.title = this.task.title;
+    this.title = this.map.title;
   }
 
   saveTitle(): void {
     if (this.editing) {
       const title: string = this.title.trim();
-      if (title.length && title !== this.task.title) {
+      if (title.length && title !== this.map.title) {
         this.update.emit({title});
       }
       this.stopEditing();
@@ -40,7 +40,7 @@ export class TaskItemComponent {
 
   toggleStatus(): void {
     this.update.emit({
-      completed: !this.task.completed
+      completed: !this.map.completed
     });
   }
 }

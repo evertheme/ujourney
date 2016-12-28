@@ -7,7 +7,7 @@
 //  TASK-ITEM
 //===================================================================
 
-.task-item {
+.map-item {
   display: flex;
   outline: none;
   border-bottom: 1px dotted #666;
@@ -22,7 +22,7 @@
   }
 }
 
-.task-item--editing {
+.map-item--editing {
   border-bottom: 1px dotted #ccc;
 }
 
@@ -53,7 +53,7 @@
 //=====================================
 //  ICON BUTTONS
 //-------------------------------------
-.task-item__button {
+.map-item__button {
   @include button-base;
   margin-left: 5px;
   outline: none;
@@ -75,13 +75,13 @@
   line-height: 40px !important;
   color: #555;
 
-  .task-item__button:hover & {
+  .map-item__button:hover & {
     color: #999;
   }
 }
 
 .icon--active {
-  &, .task-item__button:hover & {
+  &, .map-item__button:hover & {
     color: #85bf6b;
   }
 }
@@ -100,7 +100,7 @@
   to { width: 100%; }
 }
 
-.task-item__title {
+.map-item__title {
   display: inline-block;
   position: relative;
   max-width: 100%;
@@ -120,19 +120,19 @@
     content: '';
   }
 
-  .task-item--completed & {
+  .map-item--completed & {
     color: #666;
   }
 
-  .task-item--completed &:after {
+  .map-item--completed &:after {
     width: 100%;
   }
 
-  .task-item--completed.task-item--status-updated & {
+  .map-item--completed.map-item--status-updated & {
     animation: fade-title 120ms ease-in-out;
   }
 
-  .task-item--completed.task-item--status-updated &:after {
+  .map-item--completed.map-item--status-updated &:after {
     animation: strike-title 180ms ease-in-out;
   }
 }
@@ -141,7 +141,7 @@
 //=====================================
 //  TITLE : INPUT
 //-------------------------------------
-.task-item__input {
+.map-item__input {
   outline: none;
   border: 0;
   padding: 0;
