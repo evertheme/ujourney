@@ -5,7 +5,7 @@ const firebaseConfig = {
   apiKey: 'AIzaSyBqkZ2XprN22TORR0ca6KfGghI3Bg4zYt8',
   authDomain: 'ujourney-d697b.firebaseapp.com',
   databaseURL: 'https://ujourney-d697b.firebaseio.com',
-  storageBucket: ''
+  storageBucket: 'gs://ujourney-d697b.appspot.com'
 };
 
 const firebaseAuthConfig = {
