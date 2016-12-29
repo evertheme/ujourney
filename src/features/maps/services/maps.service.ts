@@ -2,7 +2,7 @@ import 'rxjs/add/observable/merge';
 import 'rxjs/add/operator/switchMap';
 
 import { Injectable } from '@angular/core';
-import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { Observable } from 'rxjs/Observable';
 import { ReplaySubject } from 'rxjs/ReplaySubject';
 import { AuthService } from '../../../auth/services/auth-service';
@@ -48,12 +48,6 @@ export class MapService {
         this.filter$.next(null);
         break;
     }
-  }
-
-  getMapById(uid){
-    const path = `/maps/${this.auth.id}/${uid}`;
-    console.log('path: ', path);
-    return this.af.database.object(path);
   }
 
   createMap(title: string): firebase.Promise<any> {

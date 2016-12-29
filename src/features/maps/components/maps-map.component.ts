@@ -1,9 +1,10 @@
+/* tslint:disable:no-string-literal */
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 import { MapService } from '../services/maps.service';
-import {IMap} from "../models/map.model";
+import {IMap} from '../models/map.model';
 
 @Component({
   template: `
@@ -18,7 +19,7 @@ import {IMap} from "../models/map.model";
         </ul>
       </section>
     </div>
-  `,
+  `
 })
 export class MapsMapComponent implements OnInit, OnDestroy {
   map: Observable<IMap>;
@@ -28,7 +29,7 @@ export class MapsMapComponent implements OnInit, OnDestroy {
 
   constructor(private route: ActivatedRoute, private mapService: MapService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.uidSub = this.route.params.subscribe(params => {
       this.uid = params['id'];
       const path = `/maps/${this.mapService.auth.id}/${this.uid}`;
@@ -37,11 +38,11 @@ export class MapsMapComponent implements OnInit, OnDestroy {
         // console.log('map: ', map);
         this.map = map;
         // console.log('this.map: ', this.map);
-      })
+      });
     });
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.uidSub.unsubscribe();
     this.mapSub.unsubscribe();
   }
