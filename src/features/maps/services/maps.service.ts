@@ -2,7 +2,7 @@ import 'rxjs/add/observable/merge';
 import 'rxjs/add/operator/switchMap';
 
 import { Injectable } from '@angular/core';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 import { Observable } from 'rxjs/Observable';
 import { ReplaySubject } from 'rxjs/ReplaySubject';
 import { AuthService } from '../../../auth/services/auth-service';
@@ -13,17 +13,18 @@ import { IMap, Map } from '../models/map.model';
 export class MapService {
   visibleMaps$: Observable<IMap[]>;
 
+  private path: string;
   private filter$: ReplaySubject<any> = new ReplaySubject(1);
   private filteredMaps$: FirebaseListObservable<IMap[]>;
   private maps$: FirebaseListObservable<IMap[]>;
 
 
-  constructor(af: AngularFire, auth: AuthService) {
-    const path = `/maps/${auth.id}`;
+  constructor(public af: AngularFire, public auth: AuthService) {
+    this.path = `/maps/${auth.id}`;
 
-    this.maps$ = af.database.list(path);
+    this.maps$ = af.database.list(this.path);
 
-    this.filteredMaps$ = af.database.list(path, {query: {
+    this.filteredMaps$ = af.database.list(this.path, {query: {
       orderByChild: 'completed',
       equalTo: this.filter$
     }});
@@ -47,6 +48,12 @@ export class MapService {
         this.filter$.next(null);
         break;
     }
+  }
+
+  getMapById(uid){
+    const path = `/maps/${this.auth.id}/${uid}`;
+    console.log('path: ', path);
+    return this.af.database.object(path);
   }
 
   createMap(title: string): firebase.Promise<any> {
