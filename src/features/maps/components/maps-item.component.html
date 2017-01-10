@@ -21,7 +21,6 @@
       class="map-item__title"
       tabindex="0">
       {{ map.title }}
-      {{ map.$key }}
     </div>
 
     <form class="map-form" *ngIf="editing" (ngSubmit)="saveTitle()" novalidate>

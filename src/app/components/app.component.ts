@@ -7,15 +7,7 @@ import { AuthService } from '../../auth';
   styles: [
     require('./app.component.scss')
   ],
-  template: `
-    <app-header
-      [authenticated]="auth.authenticated"
-      (signOut)="signOut()"></app-header>
-
-    <main class="main">
-      <router-outlet></router-outlet>
-    </main>
-  `
+  template: require('./app.component.html')
 })
 
 export class AppComponent {
