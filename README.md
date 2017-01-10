@@ -1,5 +1,5 @@
 # uJourneys Customer Journey Map Generator
-A simple Todo app example built with **Angular2** and **AngularFire2**. The app features a **Firebase** backend with **OAuth** authentication. Try the demo at <a href="https://ng2-todo-app.firebaseapp.com" target="_blank">ng2-todo-app.firebaseapp.com</a>.
+A customer journey map generator built with **Angular2** and **AngularFire2**.
 
 Quick Start
 -----------

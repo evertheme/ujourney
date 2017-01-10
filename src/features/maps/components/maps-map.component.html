@@ -4,8 +4,16 @@
   </div>
   <div>title: {{map.title}}</div>
   <section class="map-container">
+    <div class="phase categories">
+      categories
+    </div>
     <div *ngFor="let phase of map.phases" class="phase">
-      <div>{{phase.title}}</div>
+      <div class="title">{{phase.title}}</div>
+      <div *ngFor="let category of phase.categories" class="category">
+        <div *ngFor="let post of category.posts" class="post"></div>
+        <div>add post</div>
+      </div>
+      <div>add category</div>
     </div>
     <ul class="phase">add phase</ul>
   </section>
