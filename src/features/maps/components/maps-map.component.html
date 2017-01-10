@@ -1,11 +1,12 @@
-<div *ngIf="map">
+<div *ngIf="map" class="map">
   <div>
     Showing map details for product: {{id}}
   </div>
   <div>title: {{map.title}}</div>
   <section class="map-container">
-    <ul *ngFor="let phase of map.phases" class="phase">
-      <li>{{phase.title}}</li>
-    </ul>
+    <div *ngFor="let phase of map.phases" class="phase">
+      <div>{{phase.title}}</div>
+    </div>
+    <ul class="phase">add phase</ul>
   </section>
 </div>

@@ -7,8 +7,12 @@ import { MapService } from '../services/maps.service';
 import {IMap} from '../models/map.model';
 
 @Component({
+  styles: [
+    require('./maps-map.component.scss')
+  ],
   template: require('./maps-map.component.html')
 })
+
 export class MapsMapComponent implements OnInit, OnDestroy {
   map: Observable<IMap>;
   uid: string;
