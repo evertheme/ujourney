@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { Observable } from 'rxjs/Observable';
 import { ReplaySubject } from 'rxjs/ReplaySubject';
-import { AuthService } from '../../../auth/services/auth-service';
+import { AuthService } from '../../../auth/services/auth.service';
 import { IMap, Map } from '../models/map.model';
 
 

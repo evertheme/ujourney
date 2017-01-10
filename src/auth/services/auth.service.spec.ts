@@ -1,7 +1,7 @@
 import { inject, TestBed } from '@angular/core/testing';
 import { Subject } from 'rxjs/Subject';
 import { AuthProviders, FirebaseAuth, FirebaseAuthState } from 'angularfire2';
-import { AuthService } from './auth-service';
+import { AuthService } from './auth.service';
 
 
 const fbAuthMethods = [

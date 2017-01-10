@@ -6,8 +6,8 @@ import { AuthModule } from '../auth';
 import { FirebaseModule } from '../firebase';
 import { MapsModule } from '../features/maps';
 
-import { AppComponent } from './components/app';
-import { AppHeaderComponent } from './components/app-header';
+import { AppComponent } from './components/app.component';
+import { AppHeaderComponent } from './components/app-header.component';
 
 
 @NgModule({

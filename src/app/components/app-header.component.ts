@@ -5,7 +5,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-header',
   styles: [
-    require('./app-header.scss')
+    require('./app-header.component.scss')
   ],
   template: `
     <header class="header">

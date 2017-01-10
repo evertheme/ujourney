@@ -2,10 +2,10 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SignInComponent } from './components/sign-in';
-import { AuthGuard } from './guards/auth-guard';
-import { UnauthGuard } from './guards/unauth-guard';
-import { AuthService } from './services/auth-service';
+import { SignInComponent } from './components/signin.component';
+import { AuthGuard } from './guards/auth.guard';
+import { UnauthGuard } from './guards/unauth.guard';
+import { AuthService } from './services/auth.service';
 
 
 const routes: Routes = [

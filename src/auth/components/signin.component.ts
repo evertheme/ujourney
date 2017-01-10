@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/auth-service';
+import { AuthService } from '../services/auth.service';
 
 
 @Component({
   styles: [
-    require('./sign-in.scss')
+    require('./signin.component.scss')
   ],
   template: `
     <div class="g-row sign-in">

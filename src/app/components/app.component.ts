@@ -5,7 +5,7 @@ import { AuthService } from '../../auth';
 @Component({
   selector: 'app',
   styles: [
-    require('./app.scss')
+    require('./app.component.scss')
   ],
   template: `
     <app-header
