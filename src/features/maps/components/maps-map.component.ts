@@ -7,19 +7,7 @@ import { MapService } from '../services/maps.service';
 import {IMap} from '../models/map.model';
 
 @Component({
-  template: `
-    <div *ngIf="map">
-      <div>
-        Showing map details for product: {{id}}
-      </div>
-      <div>title: {{map.title}}</div>
-      <section class="map-container">
-        <ul *ngFor="let phase of map.phases" class="phase">
-            <li>{{phase.title}}</li>
-        </ul>
-      </section>
-    </div>
-  `
+  template: require('./maps-map.component.html')
 })
 export class MapsMapComponent implements OnInit, OnDestroy {
   map: Observable<IMap>;

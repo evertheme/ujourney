@@ -1,15 +1,11 @@
-<section class="map-container">
-  <ul *ngFor="phase of phases" class="phase">
-    <li *ngFor="card of phase.cards">{{card.description}}</li>
-  </ul>
-  <ul class="js-add-list list-wrapper mod-add is-idle">
-    <form>
-      <span class="placeholder js-open-add-list">Add a Phase…</span>
-      <input type="text" name="name" placeholder="Add a Phase…" autocomplete="off" maxlength="50">
-      <div>
-        <input type="submit" value="Save">
-        <a class="cancel" href="javascript:;"></a>
-      </div>
-    </form>
-  </ul>
-</section>
+<div *ngIf="map">
+  <div>
+    Showing map details for product: {{id}}
+  </div>
+  <div>title: {{map.title}}</div>
+  <section class="map-container">
+    <ul *ngFor="let phase of map.phases" class="phase">
+      <li>{{phase.title}}</li>
+    </ul>
+  </section>
+</div>
